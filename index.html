@@ -4,102 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+          content="Dominion - Command your heroes and dominate the battlefield.">
+
     <title>Dominion</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: #090b10;
-            color: white;
-            font-family: Arial, sans-serif;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 900px;
-            padding: 40px 20px;
-        }
-
-        h1 {
-            font-size: 80px;
-            margin: 0;
-            letter-spacing: 8px;
-        }
-
-        .tagline {
-            color: #aaa;
-            font-size: 22px;
-            margin-top: 10px;
-        }
-
-        .description {
-            color: #ccc;
-            max-width: 600px;
-            margin: 30px auto;
-            line-height: 1.6;
-        }
-
-        .download {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 18px 35px;
-
-            background: white;
-            color: black;
-
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-
-            border-radius: 6px;
-        }
-
-        .download:hover {
-            background: #ddd;
-        }
-
-        .version {
-            margin-top: 20px;
-            color: #666;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<!-- Navigation -->
+<nav>
+    <div class="logo">DOMINION</div>
 
-    <h1>DOMINION</h1>
+    <div class="nav-links">
+        <a href="#about">ABOUT</a>
+        <a href="#features">FEATURES</a>
+        <a href="#download">DOWNLOAD</a>
+    </div>
+</nav>
 
-    <div class="tagline">
-        Command. Conquer. Survive.
+
+<!-- Hero -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="alpha-badge">
+            IN DEVELOPMENT
+        </div>
+
+        <h1>DOMINION</h1>
+
+        <h2>
+            COMMAND. CONQUER. SURVIVE.
+        </h2>
+
+        <p>
+            Enter the battlefield with a squad of unique heroes.
+            Take direct control, command your team and fight
+            to dominate the arena.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#about" class="button primary">
+                DISCOVER DOMINION
+            </a>
+
+            <span class="button disabled">
+                DOWNLOAD — COMING SOON
+            </span>
+
+        </div>
+
     </div>
 
-    <div class="description">
-        A fast-paced arena combat game where you command a squad
-        of heroes, switch between them in real time and fight
-        for control of the battlefield.
+    <div class="scroll">
+        SCROLL TO EXPLORE
+        <span>↓</span>
     </div>
 
-    <a class="download" href="#">
+</section>
+
+
+<!-- About -->
+<section id="about" class="section">
+
+    <div class="section-label">
+        THE BATTLEFIELD AWAITS
+    </div>
+
+    <h2>TAKE CONTROL</h2>
+
+    <p class="section-description">
+        Dominion is an arena combat game built around controlling
+        a squad of heroes. Switch between your heroes in real time,
+        issue commands to your AI-controlled teammates and adapt
+        your strategy as the battle unfolds.
+    </p>
+
+</section>
+
+
+<!-- Features -->
+<section id="features" class="features">
+
+    <div class="feature">
+
+        <div class="feature-number">01</div>
+
+        <h3>COMMAND YOUR SQUAD</h3>
+
+        <p>
+            Control one hero directly while your other heroes
+            fight alongside you.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-number">02</div>
+
+        <h3>SWITCH INSTANTLY</h3>
+
+        <p>
+            Jump between your heroes at any moment and take
+            control where you're needed most.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-number">03</div>
+
+        <h3>DOMINATE THE ARENA</h3>
+
+        <p>
+            Fight across the battlefield, control key positions
+            and destroy your opponents.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Download -->
+<section id="download" class="download-section">
+
+    <div class="section-label">
+        PREPARE FOR BATTLE
+    </div>
+
+    <h2>DOMINION IS COMING</h2>
+
+    <p>
+        Dominion is currently in development.
+        The first playable build will be available here.
+    </p>
+
+    <div class="download-disabled">
         DOWNLOAD FOR WINDOWS
-    </a>
+        <span>COMING SOON</span>
+    </div>
 
     <div class="version">
-        Alpha Version
+        DEVELOPMENT BUILD
     </div>
 
-</div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <div class="footer-logo">
+        DOMINION
+    </div>
+
+    <div>
+        © 2026 Dominion
+    </div>
+
+</footer>
 
 </body>
 </html>
