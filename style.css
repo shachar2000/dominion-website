@@ -9,9 +9,14 @@ html {
 }
 
 body {
-    background: #080a0d;
-    color: #ffffff;
+    background: #07090b;
+    color: #f3f3ed;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
 }
 
 
@@ -21,7 +26,6 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
 
     display: flex;
@@ -30,7 +34,7 @@ nav {
 
     padding: 30px 6%;
 
-    z-index: 10;
+    z-index: 20;
 }
 
 .logo {
@@ -45,13 +49,11 @@ nav {
 }
 
 .nav-links a {
-    color: #aaa;
+    color: #bbb;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
     letter-spacing: 2px;
-
-    transition: 0.2s;
 }
 
 .nav-links a:hover {
@@ -64,128 +66,135 @@ nav {
 .hero {
     min-height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
     position: relative;
 
-    padding: 120px 20px 80px;
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7% 80px;
 
     background:
-        radial-gradient(
-            circle at center,
-            #20262d 0%,
-            #101318 40%,
-            #080a0d 75%
+        url("assets/images/hero.jpg")
+        center center / cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 6, 8, 0.96) 0%,
+            rgba(4, 6, 8, 0.82) 34%,
+            rgba(4, 6, 8, 0.35) 70%,
+            rgba(4, 6, 8, 0.2) 100%
+        ),
+        linear-gradient(
+            0deg,
+            #07090b 0%,
+            transparent 30%
         );
 }
 
 .hero-content {
-    max-width: 900px;
+    position: relative;
+    z-index: 2;
+
+    max-width: 780px;
 }
 
 .alpha-badge {
     display: inline-block;
 
-    border: 1px solid #555;
+    border: 1px solid rgba(255,255,255,.3);
 
     padding: 8px 14px;
 
     font-size: 10px;
     letter-spacing: 3px;
 
-    color: #aaa;
+    color: #bbb;
 
     margin-bottom: 30px;
 }
 
 .hero h1 {
-    font-size: clamp(65px, 12vw, 150px);
+    font-size: clamp(65px, 10vw, 145px);
+    line-height: .85;
 
-    line-height: 0.85;
-
-    letter-spacing: 10px;
-
+    letter-spacing: 8px;
     font-weight: 900;
 }
 
 .hero h2 {
     margin-top: 30px;
 
-    font-size: clamp(16px, 2vw, 24px);
+    font-size: clamp(16px, 2vw, 23px);
 
-    letter-spacing: 8px;
-
-    color: #aaa;
+    letter-spacing: 5px;
 }
 
 .hero p {
-    max-width: 650px;
+    max-width: 620px;
 
-    margin: 35px auto;
+    margin-top: 30px;
 
-    color: #aaa;
+    color: #bbb;
 
     line-height: 1.8;
 
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 
-    gap: 15px;
+    gap: 14px;
 
     margin-top: 40px;
 }
 
-
-/* BUTTONS */
-
 .button {
-    padding: 18px 30px;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    letter-spacing: 2px;
+    padding: 18px 28px;
 
     text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
 }
 
 .primary {
-    background: white;
-    color: black;
-
-    transition: 0.2s;
+    background: #39b9f1;
+    color: #061017;
 }
 
 .primary:hover {
-    background: #ccc;
+    background: white;
 }
 
 .disabled {
-    border: 1px solid #333;
+    border: 1px solid #555;
 
-    color: #555;
+    color: #777;
 
     cursor: not-allowed;
 }
 
-
-/* SCROLL */
-
 .scroll {
     position: absolute;
 
-    bottom: 25px;
+    z-index: 2;
 
-    color: #555;
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #777;
 
     font-size: 9px;
 
@@ -195,26 +204,29 @@ nav {
 .scroll span {
     display: block;
 
+    text-align: center;
+
     margin-top: 8px;
 
     font-size: 18px;
 }
 
 
-/* GENERAL SECTION */
+/* INTRO */
 
-.section {
+.intro {
     max-width: 1000px;
 
     margin: auto;
 
-    padding: 140px 30px;
+    padding: 150px 30px;
 
     text-align: center;
 }
 
-.section-label {
-    color: #666;
+.section-label,
+.intro .section-label {
+    color: #39b9f1;
 
     font-size: 10px;
 
@@ -223,91 +235,336 @@ nav {
     margin-bottom: 20px;
 }
 
-.section h2,
+.intro h2,
 .download-section h2 {
-    font-size: clamp(40px, 7vw, 75px);
+    font-size: clamp(40px, 6vw, 75px);
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 
     margin-bottom: 30px;
 }
 
-.section-description {
-    max-width: 750px;
+.intro p {
+    max-width: 760px;
 
     margin: auto;
 
     color: #999;
 
-    line-height: 1.9;
-
     font-size: 17px;
+
+    line-height: 1.9;
 }
 
 
-/* FEATURES */
+/* BATTLEFIELD */
 
-.features {
-    max-width: 1200px;
+.wide-shot {
+    position: relative;
 
-    margin: auto;
+    max-width: 1500px;
+
+    margin: 0 auto 160px;
+
+    padding: 0 30px;
+}
+
+.wide-shot img {
+    height: 75vh;
+
+    min-height: 500px;
+
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+
+    left: 7%;
+    bottom: 60px;
+
+    max-width: 550px;
+
+    padding: 30px;
+
+    background: rgba(5, 8, 10, .88);
+
+    border-left: 3px solid #39b9f1;
+}
+
+.image-caption span,
+.game-copy span,
+.section-heading span,
+.event-copy span,
+.victory-copy span {
+    color: #39b9f1;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.image-caption h2 {
+    font-size: 30px;
+
+    margin: 12px 0 15px;
+}
+
+.image-caption p {
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+
+/* GAME SECTIONS */
+
+.game-section {
+    max-width: 1300px;
+
+    margin: 0 auto 150px;
+
+    padding: 0 30px;
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.45fr 1fr;
 
-    gap: 1px;
+    align-items: center;
 
-    background: #25282c;
-
-    border: 1px solid #25282c;
+    gap: 70px;
 }
 
-.feature {
-    background: #0c0e11;
-
-    padding: 60px 40px;
-
-    min-height: 300px;
+.game-section.reverse {
+    grid-template-columns: 1fr 1.45fr;
 }
 
-.feature-number {
-    color: #555;
-
-    font-size: 12px;
-
-    margin-bottom: 50px;
+.game-section.reverse .game-image {
+    order: 2;
 }
 
-.feature h3 {
-    font-size: 18px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 20px;
+.game-image {
+    overflow: hidden;
 }
 
-.feature p {
-    color: #777;
+.game-image img {
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    transition: transform .5s;
+}
+
+.game-image:hover img {
+    transform: scale(1.025);
+}
+
+.game-copy h2 {
+    font-size: clamp(35px, 4vw, 55px);
+
+    margin: 15px 0 25px;
+
+    line-height: 1;
+}
+
+.game-copy p {
+    color: #999;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* WEAPONS */
+
+.weapons {
+    max-width: 1300px;
+
+    margin: 0 auto 160px;
+
+    padding: 0 30px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 60px);
+
+    margin-top: 12px;
+}
+
+.weapon-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.weapon-card {
+    background: #0c0f12;
+
+    border: 1px solid #1d2227;
+
+    overflow: hidden;
+}
+
+.weapon-card img {
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+}
+
+.weapon-info {
+    padding: 30px;
+}
+
+.weapon-info span {
+    color: #39b9f1;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.weapon-info h3 {
+    font-size: 25px;
+
+    margin: 10px 0 15px;
+}
+
+.weapon-info p {
+    color: #888;
 
     line-height: 1.7;
+}
 
-    font-size: 14px;
+
+/* SUPPLY DROP */
+
+.event-section {
+    position: relative;
+
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 160px;
+
+    overflow: hidden;
+}
+
+.event-section > img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.event-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 6, 8, .94),
+            rgba(4, 6, 8, .65) 45%,
+            rgba(4, 6, 8, .15)
+        );
+}
+
+.event-copy {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+    margin-left: 8%;
+
+    padding: 40px;
+}
+
+.event-copy h2 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: .95;
+
+    margin: 15px 0 30px;
+}
+
+.event-copy p {
+    color: #bbb;
+
+    line-height: 1.8;
+
+    max-width: 520px;
+}
+
+
+/* VICTORY */
+
+.victory-section {
+    max-width: 1300px;
+
+    margin: 0 auto 160px;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.5fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.victory-copy h2 {
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: .95;
+
+    margin: 15px 0 25px;
+}
+
+.victory-copy p {
+    color: #999;
+
+    line-height: 1.8;
+}
+
+.victory-image img {
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
 }
 
 
 /* DOWNLOAD */
 
 .download-section {
+    padding: 170px 30px;
+
     text-align: center;
 
-    padding: 180px 30px;
+    border-top: 1px solid #171a1e;
 }
 
 .download-section p {
     color: #888;
 
-    line-height: 1.7;
+    line-height: 1.8;
 
     margin-bottom: 40px;
 }
@@ -317,25 +574,25 @@ nav {
 
     flex-direction: column;
 
-    gap: 5px;
+    gap: 6px;
 
     border: 1px solid #333;
 
     padding: 20px 50px;
 
-    color: #666;
+    color: #777;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    font-weight: bold;
+    font-weight: 900;
 
     letter-spacing: 2px;
 }
 
 .download-disabled span {
-    font-size: 8px;
-
     color: #444;
+
+    font-size: 8px;
 }
 
 .version {
@@ -352,7 +609,7 @@ nav {
 /* FOOTER */
 
 footer {
-    border-top: 1px solid #1c1e21;
+    border-top: 1px solid #171a1e;
 
     padding: 40px 6%;
 
@@ -375,7 +632,7 @@ footer {
 
 /* MOBILE */
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
 
     nav {
         padding: 25px;
@@ -385,25 +642,72 @@ footer {
         display: none;
     }
 
+    .hero {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        background-position: center;
+    }
+
     .hero h1 {
-        letter-spacing: 4px;
+        letter-spacing: 3px;
     }
 
     .hero h2 {
-        letter-spacing: 4px;
+        letter-spacing: 2px;
     }
 
-    .features {
+    .wide-shot {
+        padding: 0 15px;
+
+        margin-bottom: 100px;
+    }
+
+    .wide-shot img {
+        height: 60vh;
+
+        min-height: 400px;
+    }
+
+    .image-caption {
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+    }
+
+    .game-section,
+    .game-section.reverse,
+    .victory-section {
         grid-template-columns: 1fr;
 
-        margin: 0 20px;
+        gap: 35px;
+
+        margin-bottom: 100px;
+    }
+
+    .game-section.reverse .game-image {
+        order: 0;
+    }
+
+    .weapon-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-section {
+        min-height: 650px;
+    }
+
+    .event-copy {
+        margin: 0;
+
+        padding: 30px;
     }
 
     footer {
         flex-direction: column;
 
-        gap: 15px;
-
         text-align: center;
+
+        gap: 15px;
     }
 }
