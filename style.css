@@ -711,3 +711,48 @@ footer {
         gap: 15px;
     }
 }
+/* PLATFORM DOWNLOADS */
+
+.platform-downloads {
+    max-width: 900px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.platform-card {
+    border: 1px solid #25282c;
+    background: #0c0f12;
+
+    padding: 35px 20px;
+}
+
+.platform-name {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.platform-card .download-disabled {
+    width: 100%;
+
+    padding: 18px 10px;
+}
+
+.platform-card.available {
+    border-color: #39b9f1;
+}
+
+
+/* PLATFORM DOWNLOADS MOBILE */
+
+@media (max-width: 750px) {
+    .platform-downloads {
+        grid-template-columns: 1fr;
+    }
+}
