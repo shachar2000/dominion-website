@@ -1,6 +1,6 @@
 {
-  "latestVersion": "0.14.0",
-  "minimumVersion": "0.14.0",
-  "networkProtocol": 11,
+  "latestVersion": "0.15.0",
+  "minimumVersion": "0.15.0",
+  "networkProtocol": 12,
   "updatePage": "https://shachar2000.github.io/dominion-website/#download"
 }
